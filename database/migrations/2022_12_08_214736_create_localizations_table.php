@@ -14,10 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('localizations', function (Blueprint $table) {
-            $table->increments('localization_id');
-            $table->uuid('id');
-            $table->string('lat');
-            $table->string('long');
+            $table->id();
+            $table->double('lat');
+            $table->double('long');
             $table->timestamps();
 
 
